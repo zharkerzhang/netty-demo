@@ -1,4 +1,4 @@
-package com.zharker.netty.sample.decoder;
+package com.zharker.netty.sample;
 
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;

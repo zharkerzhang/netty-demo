@@ -11,8 +11,8 @@ public class UserInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String userName;
     private int userID;
+    private String userName;
 
     public byte[] code(){
         ByteBuffer buffer = ByteBuffer.allocate(1024);

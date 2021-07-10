@@ -1,4 +1,4 @@
-package com.zharker.netty.sample.decoder;
+package com.zharker.netty.sample;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
