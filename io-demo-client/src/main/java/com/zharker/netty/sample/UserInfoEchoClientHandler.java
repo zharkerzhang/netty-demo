@@ -16,16 +16,10 @@ public class UserInfoEchoClientHandler extends ChannelHandlerAdapter {
     private static final String ECHO_REQ = "hi, welcome to netty.$_";
 
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        cause.printStackTrace();
-        ctx.close();
-    }
-
-    @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+    public void channelActive(ChannelHandlerContext ctx) {
         UserInfo[] infos = getUserInfos();
-        for (int i = 0; i < infos.length; i++) {
-            ctx.write(infos[i]);
+        for (UserInfo info : infos){
+            ctx.write(info);
         }
         ctx.flush();
     }
@@ -49,5 +43,11 @@ public class UserInfoEchoClientHandler extends ChannelHandlerAdapter {
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        cause.printStackTrace();
+        ctx.close();
     }
 }

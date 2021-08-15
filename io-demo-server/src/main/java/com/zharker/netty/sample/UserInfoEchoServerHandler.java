@@ -19,4 +19,9 @@ public class UserInfoEchoServerHandler extends ChannelHandlerAdapter {
         System.out.println("receive msgpackage message from client: ["+msg+"]");
         ctx.writeAndFlush(msg);
     }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("receive msgpackage message from client read complete");
+    }
 }

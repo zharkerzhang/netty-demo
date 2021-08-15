@@ -46,9 +46,9 @@ public class UserInfoEchoClient {
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             socketChannel.pipeline()
-                                    .addLast("frameDecoder",new LengthFieldBasedFrameDecoder(65535,0,2,0,2))
+//                                    .addLast("frameDecoder",new LengthFieldBasedFrameDecoder(65535,0,2,0,2))
                                     .addLast("msgpack decoder",new MsgpackDecoder())
-                                    .addLast("frameEncoder",new LengthFieldPrepender(2))
+//                                    .addLast("frameEncoder",new LengthFieldPrepender(2))
                                     .addLast("msgpack encoder",new MsgpackEncoder())
                                     .addLast(new UserInfoEchoClientHandler(sendNumber));
                         }
