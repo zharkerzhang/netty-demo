@@ -25,7 +25,7 @@
                 <version>0.6.1</version>
                 <configuration>
                     <protocExecutable>
-                        D:\tool\protoc-3.17.3-win64\bin\protoc.exe  <!-- 刚刚环境变量配置的位置 -->
+                        C:\tools\protoc-3.17.3-win64\bin\protoc.exe  <!-- 刚刚环境变量配置的位置 -->
                     </protocExecutable>
                     <pluginId>protoc-java</pluginId>
                     <!-- proto文件放置的目录 -->
